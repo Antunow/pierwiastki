@@ -62,29 +62,17 @@ def skrpierw():
         if stopien[i] not in sprawdzenie:
             licznik_bledu+=1
             e1.delete(0, 100)
-            if licznik_bledu <= 3:
-                messagebox.showinfo("NIE KOMBINUJ",
-                                    "Te uważaj sobie bo spotka cie zasłużona kara !!!\n Wykładnik musi być liczbą ")
+            messagebox.showinfo("NIE KOMBINUJ",
+                                    "Wykładnik musi być liczbą ")
     for i in range(0, len(liczba)):
         if liczba[i] not in sprawdzenie:
             licznik_bledu1+= 1
             e2.delete(0, 100)
-            if licznik_bledu <= 3 or licznik_bledu1 <=3:
-                messagebox.showinfo("NIE KOMBINUJ",
-                                    "Te uważaj sobie bo spotka cie zasłużona kara !!!\n podstawa musi być liczbą ")
 
-    if licznik_bledu==4 or licznik_bledu1==4:
-         messagebox.showinfo("OSTRZEGAM CIĘ","nie kombinuj!!!\n sroga kara sie zbliża !!! ")
-    if licznik_bledu==5 or licznik_bledu==5:
-        for i in range(0,10):
-            messagebox.showinfo("No i musisz kombinować","Teraz cierp\n i pamietaj że wiem gdzie mieszkasz !!!\n nawiedzę cie w nocy i wymierze resztę kary")
-        messagebox.showinfo("masz już dosyć ",
-                            "Mam nadzieję żę masz już dosyć\n nastepnym razem bedzie mniej przyjemnie")
-    if licznik_bledu==7 or licznik_bledu1==7:
-        for i in range(0,50):
-            messagebox.showinfo("Apokalipsa","ostrzegałęm wielokrotnie\n nocna kara będzie dotliwa!!!")
-        messagebox.showinfo("Przesadziłaś ", "Jesteś niereformowalna!!!\nNie bedę z tobą współpracował", )
-        sys.exit()
+            messagebox.showinfo("NIE KOMBINUJ",
+                                    "Podstawa musi być liczbą ")
+
+
 
     stopien=int(stopien)
     liczba=int(liczba)
@@ -116,7 +104,7 @@ def skrpierw():
 
         for j in pupa:
             if ii ==j:
-                licznik+=1              #todo problem z usywaniem elemetów chce usówać jeden wiecej niż się w nim znajduje są dwie petle mozę trrzba stwożyć roboczą listę ?
+                licznik+=1              
         if licznik >=stopien:
             przedpierw.append(ii)
 
@@ -174,3 +162,4 @@ b1.grid(row=3)
 
 
 okno.mainloop()
+
